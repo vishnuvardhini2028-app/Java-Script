@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+         background-color: #f5f7fa; 
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         margin-top: 100px; 
+    }
+
+    /* Heading */
+    #one {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Inputs */
+    input {
+        width: 220px;
+        padding: 10px;
+        margin: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    /* Buttons */
+    button {
+        padding: 10px 15px;
+        margin: 6px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Different colors */
+    #btn { background-color: #4CAF50; }
+    #btn1 { background-color: #2196F3; }
+    #btn2 { background-color: #FF9800; }
+    #btn3 { background-color: #f44336; }
+
+    button:hover {
+        opacity: 0.9;
+     }
+
+     #btn:hover{
+        background-color: rgb(217, 230, 67);
+     }
+      #btn1:hover{
+        background-color: rgb(217, 230, 67);
+     }
+      #btn2:hover{
+        background-color: rgb(217, 230, 67);
+     }
+      #btn3:hover{
+        background-color: rgb(217, 230, 67);
+     }
+
+    /* Result */
+    #value {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #222;
+    }
+    .container{
+        width: 300px;
+    background: #6db8db;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center; 
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+   <h3 id="one">Calculator</h3> 
+   <input type="number" placeholder="Enter number 1 :" id="num1"><br><br>
+   <input type="number" placeholder="Enter number 2 :" id="num2"><br><br>
+   <button id="btn">ADD</button>
+   <button id="btn1">Subtract</button>
+   <button id="btn2">Multiply</button>
+   <button id="btn3">Division</button>
+   <h3 id="value"></h3>
+   </div>
+   <script type="module" src="./add2.js"></script>
+</body>
+</html>
+
+
+
+ 
