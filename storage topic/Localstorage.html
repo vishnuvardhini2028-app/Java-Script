@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <style>
+        body
+        {
+           text-align: center; 
+           margin-top: 200px;
+        }
+        .card{
+            width: 300px;
+            margin: auto;
+            padding: 30px;
+            background-color: rgb(237, 158, 223);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        button{
+            padding: 10px;
+            margin: 7px;
+            border-radius: 5px;
+            font-style: italic;
+            border-color: blue;
+            
+        }
+         #one{
+            background-color: rgb(56, 221, 15);
+        }
+        #two{
+            background-color: red;
+        }
+        #three{
+            background-color: rgb(119, 148, 225);
+        }
+        #one:hover{
+            background-color: salmon;
+        }
+        #two:hover{
+            background-color: salmon;
+        }
+        #three:hover{
+            background-color: salmon;
+        }
+           input[type="text"]
+            {
+          width: 80%;
+         padding: 12px;
+        border-radius: 15px;
+        border: 1px solid #aaa;
+        outline: none;
+        transition: 0.3s;
+        }
+
+       input[type="text"]:focus 
+       {
+        border-color: #4CAF50;
+       box-shadow: 0 0 5px #4CAF50;
+       }
+       input:hover
+       {
+        background-color:rgb(241, 234, 145)
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>Local Storage</h3>
+        <input type="text" id="name" placeholder="Enter your Name"><br><br>
+        <button id="one" onclick="saveName()">Save</button>
+        <button id="two" onclick="getdata()">Show</button>
+        <button id="three" onclick="clearData()">Clear</button>
+        <p id="display"></p>
+</div>
+<script>
+    function saveName()
+    {
+       let name=document.getElementById("name").value;
+       localStorage.setItem("user", name);
+       alert("Data saved !")
+    }
+    function getdata()
+    {
+        let user=localStorage.getItem("user");
+        if(user)
+    {
+        document.getElementById("display").innerText="Hello " + user;
+    }
+    else
+    {
+       document.getElementById("display").innerText="No data found !"
+    }
+    }
+    function clearData()
+    {
+        localStorage.removeItem("user");
+        document.getElementById("display").innerText="Data cleared...."
+    }
+</script>
+</body>
+</html>
